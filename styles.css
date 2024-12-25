@@ -1,0 +1,51 @@
+/* CSS Custom Properties */
+:root {
+    --spacing-sm: 10px;
+    --z-index-controls: 1;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    overflow: hidden;
+    background: white;
+    margin: 0;
+    min-height: 100vh;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Components */
+.canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.controls {
+    position: fixed;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    z-index: var(--z-index-controls);
+    background: rgba(255, 255, 255, 0.8);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+}
+
+.controls button {
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+}
